@@ -2,6 +2,7 @@ import numpy as np
 
 a = int(input("le nombre de lignes matrice 1 : ", ))
 b = int(input("le nombre de lignes matrice 2 : ", ))
+c = int(input("Que souhaitez-vous au cas ou la multiplication échoue : ", ))
 
 CONSTANTE = 3
 
@@ -14,8 +15,14 @@ if CONSTANTE == b:
     print(double_matrix)
 else:
     try:
-        somme = matrix_1 + matrix_2
-        print("La somme de matrice est ")
-        print(somme)
+        match c:
+            case 1:
+                somme = matrix_1 + matrix_2
+                print("La somme de matrice est ")
+                print(somme)
+            case 0:
+                difference = matrix_1 - matrix_2
+                print("La différence de matrice est ")
+                print(difference)
     except:
         print("Le matrice sont incompatible pour la faire une sommation")

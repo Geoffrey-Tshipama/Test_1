@@ -30,8 +30,10 @@ if CONSTANTE == b:
     print(double_matrix)
 else:
     print("La multiplication à échoué")
-    c = int(input("Que souhaitez-vous faire la soustraction(0) ou l'addition(1) ? : ", ))
-    try:
-        choose(c)
-    except:
-        print("Les matrices sont incompatible pour la faire une sommation")
+    c = 10
+    while c != 0 and c != 1:
+        c = int(input("Que souhaitez-vous faire la soustraction(0) ou l'addition(1) ? : ", ))
+        try:
+            choose(c)
+        except:
+            print("Les matrices sont incompatible pour la faire une sommation")
